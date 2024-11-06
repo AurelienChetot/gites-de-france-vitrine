@@ -46,7 +46,9 @@ export default function Header() {
             />
             <div className="text-container">
               <h1>
-                Détente, Nature, <br /> Partage
+                Détente, Nature, <br />
+                Partage
+                <span className="gites">Gîtes de France</span>
               </h1>
               <h2>{gite.title}</h2>
             </div>
