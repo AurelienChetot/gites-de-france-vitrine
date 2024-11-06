@@ -1,4 +1,3 @@
-// app/components/Navbar.js
 "use client";
 
 import Link from "next/link";
@@ -7,21 +6,24 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <ul>
-        <li>
-          <Link href="/">Provence</Link>
-        </li>
-        <li>
-          <Link href="/">Auvergne</Link>
-        </li>
-        <li>
-          <Link href="/">Normandie</Link>
-        </li>
-        <li>
-          <Link href="/">Nouvelle-Aquitaine</Link>
-        </li>
-        <li>
-          <Link href="/">Corse</Link>
-        </li>
+        <Link className="nav" href="/">
+          <li>Tous</li>
+        </Link>
+        <Link href="/">
+          <li>Provence</li>
+        </Link>
+        <Link href="/">
+          <li>Auvergne</li>
+        </Link>
+        <Link href="/">
+          <li>Normandie</li>
+        </Link>
+        <Link href="/">
+          <li>Nouvelle-Aquitaine</li>
+        </Link>
+        <Link href="/">
+          <li>Corse</li>
+        </Link>
       </ul>
     </nav>
   );
