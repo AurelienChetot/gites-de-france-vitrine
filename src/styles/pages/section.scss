@@ -52,7 +52,7 @@
 }
 .button-container {
   position: absolute;
-  bottom: -85px;
+  bottom: -50px;
   right: 40%;
   z-index: 1001;
 
@@ -66,6 +66,36 @@
   }
 }
 
+.price-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: -80px;
+  gap: 3px;
+}
+
+.front-text {
+  position: absolute;
+  top: -140px;
+  width: 300%;
+  text-shadow: 1px 1px rgb(49, 49, 49);
+}
+
+.effect {
+  font-size: 1.5rem;
+  color: #ffffff;
+  animation: colorChange 2s infinite alternate;
+  transition: color 0.5s ease-in-out;
+}
+
+@keyframes colorChange {
+  0% {
+    color: $color-hover;
+  }
+  100% {
+    color: rgb(0, 150, 142);
+  }
+}
 // Card Effect
 
 /* From Uiverse.io by kennyotsu */
@@ -93,9 +123,9 @@
   transition: 700ms;
   background: linear-gradient(
     43deg,
-    rgb(4, 116, 110) 0%,
-    rgb(4, 116, 110) 46%,
-    rgb(4, 116, 110) 100%
+    rgb(33, 42, 57) 0%,
+    rgb(33, 42, 57) 46%,
+    rgb(33, 42, 57) 100%
   );
 }
 

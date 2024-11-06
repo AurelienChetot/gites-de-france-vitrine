@@ -5,6 +5,7 @@ import Image from "next/image";
 import Person from "../../../public/svg/person.svg";
 import Bed from "../../../public/svg/bed.svg";
 import Star from "../../../public/svg/star.svg";
+import Euro from "../../../public/svg/euro.svg";
 
 export default function Section({ gites }) {
   return (
@@ -40,14 +41,20 @@ export default function Section({ gites }) {
               <div className="tracker tr-24"></div>
               <div className="tracker tr-25"></div>
               <div id="card">
-                <p id="prompt">Voir plus </p>
+                <div id="prompt">
+                  {" "}
+                  <p className="front-text">
+                    Envie de visitez la région {gite.region}
+                  </p>
+                  <p className="effect">Voir plus</p>
+                </div>
+                <div className="button-container">
+                  <a href="https://google.com" target="/blank">
+                    <button>Visitez</button>
+                  </a>
+                </div>
                 <div className="title">
                   <p>{gite.description}</p>
-                  <div className="button-container">
-                    <a href="https://google.com">
-                      <button>Visitez</button>
-                    </a>
-                  </div>
                   <div className="capacity-bed-container">
                     <div className="capacity-container">
                       <Image alt={Person} src={Person} width={30} height={0} />
@@ -58,6 +65,12 @@ export default function Section({ gites }) {
                       {gite.beds}
                     </div>
                   </div>
+                  <div className="price-container">
+                    {gite.price_per_night}
+                    <Image alt={Euro} src={Euro} width={13} height={0} />
+                    {""}
+                    <p>Par nuit</p>
+                  </div>
                   <div className="rating-container">
                     <Image alt={Star} src={Star} width={25} height={0} />
                     {gite.rating}
@@ -67,10 +80,13 @@ export default function Section({ gites }) {
                   <Image
                     src={gite.image}
                     alt={gite.title}
+                    quality={100}
                     width={200}
                     height={100}
                   />
-                  <div className="subtitle">{gite.title}</div>
+                  <div className="subtitle">
+                    <p>{gite.title}</p>
+                  </div>
                 </div>
               </div>
             </div>
