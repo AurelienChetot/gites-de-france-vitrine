@@ -1,0 +1,42 @@
+.footer-container {
+  height: 300px;
+  border-top: solid 1px $color-hover;
+  padding-top: 20px;
+  background-color: black;
+  text-align: center;
+
+  p {
+    font-size: 1.1rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    background: linear-gradient(to left, #9f9f9f 0%, #fff 10%, #868686 20%);
+    background-position: 100% 0;
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 2s linear infinite, colorChange 2s infinite alternate;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    color: $text-color;
+  }
+  100% {
+    color: rgb(0, 150, 142);
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}

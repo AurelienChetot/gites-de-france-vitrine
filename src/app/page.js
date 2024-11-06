@@ -1,7 +1,7 @@
 // app/page.js
 import Header from "./components/header";
 import Section from "./components/section";
-
+import Footer from "./components/footer";
 // Server-side data fetching
 export default async function Home() {
   const res = await fetch("http://localhost:3000/data.json");
@@ -11,6 +11,7 @@ export default async function Home() {
     <div>
       <Header gites={gites} />
       <Section gites={gites} />
+      <Footer />
     </div>
   );
 }

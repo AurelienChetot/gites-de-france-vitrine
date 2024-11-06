@@ -10,7 +10,7 @@ import Euro from "../../../public/svg/euro.svg";
 export default function Section({ gites }) {
   return (
     <section className="section-container">
-      <p className="text-color">Hello</p>
+      <p className="text-color">Retrouvez notre séléction :</p>
       <div className="card-container">
         {gites.map((gite, index) => (
           <div key={index} className="container noselect">
