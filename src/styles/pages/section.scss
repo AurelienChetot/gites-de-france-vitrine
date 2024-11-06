@@ -1,27 +1,85 @@
 .text-color {
   color: white;
+  margin-bottom: 50px;
 }
 .section-container {
   margin-top: 100px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .card-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 100px;
+  justify-items: center;
 }
+
+.img-text-container {
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+}
+
+.capacity-bed-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+.capacity-container,
+.bed-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-left: 20px;
+  padding-top: 10px;
+}
+
+.rating-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: -85px;
+  right: 15px;
+}
+.button-container {
+  position: absolute;
+  bottom: -85px;
+  right: 40%;
+  z-index: 1001;
+
+  button {
+    cursor: pointer;
+    background-color: $color-hover;
+    border: solid 2px $title-color;
+    border-radius: 15px;
+    color: $text-color;
+    padding: 10px;
+  }
+}
+
 // Card Effect
 
 /* From Uiverse.io by kennyotsu */
 /*works janky on mobile :<*/
 .container {
   position: relative;
-  width: 190px;
-  height: 254px;
+  width: 339px;
+  height: 447px;
   transition: 200ms;
 }
 
 .container:active {
-  width: 180px;
-  height: 245px;
+  width: 339px;
+  height: 447px;
 }
 
 #card {
@@ -35,17 +93,18 @@
   transition: 700ms;
   background: linear-gradient(
     43deg,
-    rgb(65, 88, 208) 0%,
-    rgb(20, 22, 172) 46%,
-    rgb(10, 2, 85) 100%
+    rgb(4, 116, 110) 0%,
+    rgb(4, 116, 110) 46%,
+    rgb(4, 116, 110) 100%
   );
 }
 
 .subtitle {
-  transform: translateY(10px);
-  color: rgb(134, 110, 221);
-  text-align: center;
+  color: $text-color;
+  font-family: "Roboto";
+  font-size: 1.2rem;
   width: 100%;
+  margin-bottom: 25px;
 }
 
 .title {
@@ -54,9 +113,20 @@
   transition-timing-function: ease-in-out-out;
   transition-delay: 100ms;
   position: absolute;
-  font-size: x-large;
-  font-weight: bold;
-  color: white;
+  font-family: "Roboto";
+  text-align: left;
+  bottom: 100px;
+  padding-left: 20px;
+  padding-right: 50px;
+  color: $title-color;
+}
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 24%;
+  width: 50%;
+  border-bottom: solid 1px $primary-background-color;
 }
 
 .tracker:hover ~ #card .title {
@@ -122,9 +192,9 @@
   content: "";
   background: linear-gradient(
     43deg,
-    rgb(65, 88, 208) 0%,
-    rgb(20, 22, 172) 46%,
-    rgb(10, 2, 85) 100%
+    rgb(10, 207, 197) 0%,
+    rgb(4, 116, 110) 46%,
+    rgb(10, 207, 197) 100%
   );
   filter: blur(2rem);
   opacity: 30%;
@@ -237,62 +307,62 @@
 
 .tr-1:hover ~ #card {
   transition: 125ms ease-in-out;
-  transform: rotateX(20deg) rotateY(-10deg) rotateZ(0deg);
+  transform: rotateX(-20deg) rotateY(10deg) rotateZ(0deg);
 }
 
 .tr-2:hover ~ #card {
   transition: 125ms ease-in-out;
-  transform: rotateX(20deg) rotateY(-5deg) rotateZ(0deg);
+  transform: rotateX(-20deg) rotateY(5deg) rotateZ(0deg);
 }
 
 .tr-3:hover ~ #card {
   transition: 125ms ease-in-out;
-  transform: rotateX(20deg) rotateY(0deg) rotateZ(0deg);
+  transform: rotateX(-20deg) rotateY(0deg) rotateZ(0deg);
 }
 
 .tr-4:hover ~ #card {
   transition: 125ms ease-in-out;
-  transform: rotateX(20deg) rotateY(5deg) rotateZ(0deg);
+  transform: rotateX(-20deg) rotateY(-5deg) rotateZ(0deg);
 }
 
 .tr-5:hover ~ #card {
   transition: 125ms ease-in-out;
-  transform: rotateX(20deg) rotateY(10deg) rotateZ(0deg);
+  transform: rotateX(-20deg) rotateY(-10deg) rotateZ(0deg);
 }
 
 .tr-6:hover ~ #card {
   transition: 125ms ease-in-out;
-  transform: rotateX(10deg) rotateY(-10deg) rotateZ(0deg);
+  transform: rotateX(-10deg) rotateY(10deg) rotateZ(0deg);
 }
 
 .tr-7:hover ~ #card {
   transition: 125ms ease-in-out;
-  transform: rotateX(10deg) rotateY(-5deg) rotateZ(0deg);
+  transform: rotateX(-10deg) rotateY(5deg) rotateZ(0deg);
 }
 
 .tr-8:hover ~ #card {
   transition: 125ms ease-in-out;
-  transform: rotateX(10deg) rotateY(0deg) rotateZ(0deg);
+  transform: rotateX(-10deg) rotateY(0deg) rotateZ(0deg);
 }
 
 .tr-9:hover ~ #card {
   transition: 125ms ease-in-out;
-  transform: rotateX(10deg) rotateY(5deg) rotateZ(0deg);
+  transform: rotateX(-10deg) rotateY(-5deg) rotateZ(0deg);
 }
 
 .tr-10:hover ~ #card {
   transition: 125ms ease-in-out;
-  transform: rotateX(10deg) rotateY(10deg) rotateZ(0deg);
+  transform: rotateX(-10deg) rotateY(-10deg) rotateZ(0deg);
 }
 
 .tr-11:hover ~ #card {
   transition: 125ms ease-in-out;
-  transform: rotateX(0deg) rotateY(-10deg) rotateZ(0deg);
+  transform: rotateX(0deg) rotateY(10deg) rotateZ(0deg);
 }
 
 .tr-12:hover ~ #card {
   transition: 125ms ease-in-out;
-  transform: rotateX(0deg) rotateY(-5deg) rotateZ(0deg);
+  transform: rotateX(0deg) rotateY(5deg) rotateZ(0deg);
 }
 
 .tr-13:hover ~ #card {
@@ -302,62 +372,62 @@
 
 .tr-14:hover ~ #card {
   transition: 125ms ease-in-out;
-  transform: rotateX(0deg) rotateY(5deg) rotateZ(0deg);
+  transform: rotateX(0deg) rotateY(-5deg) rotateZ(0deg);
 }
 
 .tr-15:hover ~ #card {
   transition: 125ms ease-in-out;
-  transform: rotateX(0deg) rotateY(10deg) rotateZ(0deg);
+  transform: rotateX(0deg) rotateY(-10deg) rotateZ(0deg);
 }
 
 .tr-16:hover ~ #card {
   transition: 125ms ease-in-out;
-  transform: rotateX(-10deg) rotateY(-10deg) rotateZ(0deg);
+  transform: rotateX(10deg) rotateY(10deg) rotateZ(0deg);
 }
 
 .tr-17:hover ~ #card {
   transition: 125ms ease-in-out;
-  transform: rotateX(-10deg) rotateY(-5deg) rotateZ(0deg);
+  transform: rotateX(10deg) rotateY(5deg) rotateZ(0deg);
 }
 
 .tr-18:hover ~ #card {
   transition: 125ms ease-in-out;
-  transform: rotateX(-10deg) rotateY(0deg) rotateZ(0deg);
+  transform: rotateX(10deg) rotateY(0deg) rotateZ(0deg);
 }
 
 .tr-19:hover ~ #card {
   transition: 125ms ease-in-out;
-  transform: rotateX(-10deg) rotateY(5deg) rotateZ(0deg);
+  transform: rotateX(10deg) rotateY(-5deg) rotateZ(0deg);
 }
 
 .tr-20:hover ~ #card {
   transition: 125ms ease-in-out;
-  transform: rotateX(-10deg) rotateY(10deg) rotateZ(0deg);
+  transform: rotateX(10deg) rotateY(-10deg) rotateZ(0deg);
 }
 
 .tr-21:hover ~ #card {
   transition: 125ms ease-in-out;
-  transform: rotateX(-20deg) rotateY(-10deg) rotateZ(0deg);
+  transform: rotateX(20deg) rotateY(10deg) rotateZ(0deg);
 }
 
 .tr-22:hover ~ #card {
   transition: 125ms ease-in-out;
-  transform: rotateX(-20deg) rotateY(-5deg) rotateZ(0deg);
+  transform: rotateX(20deg) rotateY(5deg) rotateZ(0deg);
 }
 
 .tr-23:hover ~ #card {
   transition: 125ms ease-in-out;
-  transform: rotateX(-20deg) rotateY(0deg) rotateZ(0deg);
+  transform: rotateX(20deg) rotateY(0deg) rotateZ(0deg);
 }
 
 .tr-24:hover ~ #card {
   transition: 125ms ease-in-out;
-  transform: rotateX(-20deg) rotateY(5deg) rotateZ(0deg);
+  transform: rotateX(20deg) rotateY(-5deg) rotateZ(0deg);
 }
 
 .tr-25:hover ~ #card {
   transition: 125ms ease-in-out;
-  transform: rotateX(-20deg) rotateY(10deg) rotateZ(0deg);
+  transform: rotateX(20deg) rotateY(-10deg) rotateZ(0deg);
 }
 
 .noselect {

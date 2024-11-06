@@ -10,7 +10,7 @@ export default async function Home() {
   return (
     <div>
       <Header gites={gites} />
-      <Section />
+      <Section gites={gites} />
     </div>
   );
 }
