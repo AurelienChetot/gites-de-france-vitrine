@@ -1,5 +1,6 @@
 // app/page.js
 import Header from "./components/header";
+import Section from "./components/section";
 
 // Server-side data fetching
 export default async function Home() {
@@ -9,6 +10,7 @@ export default async function Home() {
   return (
     <div>
       <Header gites={gites} />
+      <Section />
     </div>
   );
 }

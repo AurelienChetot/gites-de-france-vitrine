@@ -1,13 +1,14 @@
 @import "abstracts/variables";
 @import "pages/header.scss";
 @import "pages/navbar.scss";
+@import "pages/section.scss";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  // overflow-x: hidden;
+  // overflow-y: hidden;
 }
 
 body {
