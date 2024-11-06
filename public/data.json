@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "title": "Gîte de Provence",
+    "description": "Un havre de paix en plein cœur de la Provence, entouré de champs de lavande.",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "rating": 4.8,
+    "image": "/images/1.png",
+    "price_per_night": 120,
+    "capacity": 4,
+    "beds": 2
+  },
+  {
+    "id": 2,
+    "title": "Maison de la Côte d'Azur",
+    "description": "Une maison lumineuse sur la Côte d'Azur avec une belle vue sur la mer.",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "rating": 4.9,
+    "image": "/images/2.png",
+    "price_per_night": 200,
+    "capacity": 6,
+    "beds": 3
+  },
+  {
+    "id": 3,
+    "title": "Chalet Savoyard",
+    "description": "Un magnifique chalet avec vue sur les Alpes, idéal pour les amoureux de la montagne.",
+    "region": "Auvergne-Rhône-Alpes",
+    "rating": 4.7,
+    "image": "/images/3.png",
+    "price_per_night": 150,
+    "capacity": 5,
+    "beds": 3
+  },
+  {
+    "id": 4,
+    "title": "Gîte du Massif Central",
+    "description": "Un gîte chaleureux niché dans les montagnes du Massif Central.",
+    "region": "Auvergne-Rhône-Alpes",
+    "rating": 4.6,
+    "image": "/images/4.png",
+    "price_per_night": 130,
+    "capacity": 4,
+    "beds": 2
+  },
+  {
+    "id": 5,
+    "title": "Maison Normande",
+    "description": "Charmante maison normande avec un grand jardin, parfaite pour un séjour paisible.",
+    "region": "Normandie",
+    "rating": 4.5,
+    "image": "/images/5.png",
+    "price_per_night": 100,
+    "capacity": 4,
+    "beds": 2
+  },
+  {
+    "id": 6,
+    "title": "Cottage Normand",
+    "description": "Un cottage traditionnel en Normandie, entouré de vergers et de champs.",
+    "region": "Normandie",
+    "rating": 4.7,
+    "image": "/images/6.png",
+    "price_per_night": 110,
+    "capacity": 5,
+    "beds": 3
+  },
+  {
+    "id": 7,
+    "title": "Domaine du Bordelais",
+    "description": "Un domaine viticole pour un séjour relaxant au cœur des vignes.",
+    "region": "Nouvelle-Aquitaine",
+    "rating": 4.6,
+    "image": "/images/7.png",
+    "price_per_night": 180,
+    "capacity": 6,
+    "beds": 3
+  },
+  {
+    "id": 8,
+    "title": "Maison du Périgord",
+    "description": "Maison de caractère en Périgord, avec piscine et grande terrasse.",
+    "region": "Nouvelle-Aquitaine",
+    "rating": 4.8,
+    "image": "/images/8.png",
+    "price_per_night": 160,
+    "capacity": 5,
+    "beds": 3
+  },
+  {
+    "id": 9,
+    "title": "Villa Corse",
+    "description": "Une villa ensoleillée en Corse avec vue sur la mer et un accès direct à la plage.",
+    "region": "Corse",
+    "rating": 4.9,
+    "image": "/images/9.png",
+    "price_per_night": 220,
+    "capacity": 6,
+    "beds": 3
+  },
+  {
+    "id": 10,
+    "title": "Gîte Champenois",
+    "description": "Un charmant gîte entouré de vignes dans la région de Champagne.",
+    "region": "Grand Est",
+    "rating": 4.5,
+    "image": "/images/10.png",
+    "price_per_night": 140,
+    "capacity": 4,
+    "beds": 2
+  }
+]
