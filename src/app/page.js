@@ -1,6 +1,5 @@
 // app/page.js
 
-import Footer from "./components/footer";
 import HomeClient from "./components/homeclient";
 
 export default async function Home() {
@@ -11,7 +10,6 @@ export default async function Home() {
   return (
     <div>
       <HomeClient gites={gites} />
-      <Footer />
     </div>
   );
 }

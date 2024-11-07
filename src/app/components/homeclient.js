@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Navbar from "./navbar";
 import Section from "./section";
 import Header from "./header";
+import Footer from "./footer";
 import Loading from "./loading";
 
 export default function HomeClient({ gites }) {
@@ -15,7 +16,7 @@ export default function HomeClient({ gites }) {
   useEffect(() => {
     const loadingDelay = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 4000);
 
     return () => clearTimeout(loadingDelay);
   }, [gites]);
@@ -27,6 +28,7 @@ export default function HomeClient({ gites }) {
       <Header gites={gites} autoplay={autoplay} />
       <Navbar setSelectedRegion={setSelectedRegion} setAutoplay={setAutoplay} />
       <Section gites={gites} selectedRegion={selectedRegion} />
+      <Footer />
     </div>
   );
 }
