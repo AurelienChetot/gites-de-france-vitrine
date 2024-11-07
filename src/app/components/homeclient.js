@@ -1,17 +1,19 @@
 // app/components/HomeClient.js
-// Creation de la page homeclient car le fetch est async (pas de hook utilisable)
 "use client";
 
 import { useState } from "react";
 import Navbar from "./navbar";
 import Section from "./section";
+import Header from "./header";
 
 export default function HomeClient({ gites }) {
   const [selectedRegion, setSelectedRegion] = useState("Tous");
+  const [autoplay, setAutoplay] = useState(false);
 
   return (
     <div>
-      <Navbar setSelectedRegion={setSelectedRegion} />
+      <Navbar setSelectedRegion={setSelectedRegion} setAutoplay={setAutoplay} />
+      <Header gites={gites} autoplay={autoplay} />
       <Section gites={gites} selectedRegion={selectedRegion} />
     </div>
   );

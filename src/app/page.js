@@ -1,18 +1,15 @@
 // app/page.js
 
-import Header from "./components/header";
-import Section from "./components/section";
 import Footer from "./components/footer";
 import HomeClient from "./components/homeclient";
 
-// Server-side data fetching
+// Récupere le fetch coté serveur (non client)
 export default async function Home() {
   const res = await fetch("http://localhost:3000/data.json");
   const gites = await res.json();
 
   return (
     <div>
-      <Header gites={gites} />
       <HomeClient gites={gites} />
       <Footer />
     </div>

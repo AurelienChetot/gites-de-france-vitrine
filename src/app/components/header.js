@@ -1,7 +1,7 @@
 // app/components/header.js
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import Image from "next/image";
 
@@ -9,7 +9,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-export default function Header() {
+export default function Header({ autoplay }) {
+  const sliderRef = useRef(null);
   const [gites, setGites] = useState([]);
 
   useEffect(() => {
@@ -18,11 +19,21 @@ export default function Header() {
       .then((data) => setGites(data));
   }, []);
 
+  useEffect(() => {
+    if (sliderRef.current) {
+      if (autoplay) {
+        sliderRef.current.slickPlay();
+      } else {
+        sliderRef.current.slickPause();
+      }
+    }
+  }, [autoplay]);
+
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
-    autoplay: true,
+    autoplay: autoplay,
     autoplaySpeed: 5000,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -31,7 +42,7 @@ export default function Header() {
 
   return (
     <header>
-      <Slider {...settings}>
+      <Slider ref={sliderRef} {...settings}>
         {gites.map((gite) => (
           <div key={gite.id} className="gite-header">
             <Image
