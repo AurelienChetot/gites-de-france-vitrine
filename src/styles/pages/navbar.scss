@@ -14,6 +14,21 @@
   text-align: center;
   border-radius: 15px;
   height: 100px;
+
+  &.sticky {
+    position: fixed;
+    background-color: $secondary-background-color-navbar;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    right: 0;
+    bottom: auto;
+    margin-top: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+
   ul {
     list-style: none;
     display: flex;

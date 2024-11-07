@@ -1,12 +1,41 @@
 "use client";
 
+import { useState, useEffect, useRef } from "react";
+
 export default function Navbar({ setAutoplay, setSelectedRegion }) {
+  const [isSticky, setIsSticky] = useState(false);
+  const navbarRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (navbarRef.current) {
+        const scrollPosition = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const stickyThreshold = 75; // Utilise "vh"
+
+        const thresholdInPixels = (stickyThreshold / 100) * windowHeight;
+
+        if (scrollPosition >= thresholdInPixels) {
+          setIsSticky(true);
+        } else {
+          setIsSticky(false);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const handleCheckboxChange = (event) => {
     setAutoplay(event.target.checked);
   };
 
   return (
-    <nav className="navbar">
+    <nav ref={navbarRef} className={`navbar ${isSticky ? "sticky" : ""}`}>
       <ul>
         <li onClick={() => setSelectedRegion("Tous")}>Tous</li>
         <li onClick={() => setSelectedRegion("Provence-Alpes-Côte d'Azur")}>

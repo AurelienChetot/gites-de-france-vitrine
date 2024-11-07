@@ -34,7 +34,7 @@ export default function Header({ autoplay }) {
     infinite: true,
     speed: 500,
     autoplay: autoplay,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
