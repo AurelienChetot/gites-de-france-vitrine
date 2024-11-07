@@ -57,7 +57,7 @@ export default function Header({ autoplay }) {
               <motion.h1
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
+                transition={{ duration: 2 }}
               >
                 Détente, Nature, <br />
                 Partage
@@ -66,7 +66,7 @@ export default function Header({ autoplay }) {
               <motion.h2
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.3 }}
+                transition={{ duration: 2, delay: 0.6 }}
               >
                 {gite.title}
               </motion.h2>
