@@ -8,6 +8,7 @@ import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { motion } from "framer-motion";
 
 export default function Header({ autoplay }) {
   const sliderRef = useRef(null);
@@ -53,12 +54,22 @@ export default function Header({ autoplay }) {
               height={1080}
             />
             <div className="text-container">
-              <h1>
+              <motion.h1
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+              >
                 Détente, Nature, <br />
                 Partage
                 <span className="gites">Gîtes de France</span>
-              </h1>
-              <h2>{gite.title}</h2>
+              </motion.h1>
+              <motion.h2
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.3 }} // Ajouter un léger délai à l'animation du h2
+              >
+                {gite.title}
+              </motion.h2>
             </div>
           </div>
         ))}

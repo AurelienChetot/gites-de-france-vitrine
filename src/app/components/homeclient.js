@@ -12,8 +12,8 @@ export default function HomeClient({ gites }) {
 
   return (
     <div>
-      <Navbar setSelectedRegion={setSelectedRegion} setAutoplay={setAutoplay} />
       <Header gites={gites} autoplay={autoplay} />
+      <Navbar setSelectedRegion={setSelectedRegion} setAutoplay={setAutoplay} />
       <Section gites={gites} selectedRegion={selectedRegion} />
     </div>
   );
