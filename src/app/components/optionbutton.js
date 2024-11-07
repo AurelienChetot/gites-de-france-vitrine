@@ -27,41 +27,53 @@ export default function OptionButton({ setSelectedOptions }) {
           <div className="submenu-item">
             <p className="submenu-link">
               Animaux Acceptés{" "}
-              <input
-                onClick={() => handleOptionClick("animaux_acceptes")}
-                type="checkbox"
-                className="checkbox"
-              />
+              <label className="checkbox-wrapper">
+                <input
+                  onClick={() => handleOptionClick("animaux_acceptes")}
+                  type="checkbox"
+                  className="checkbox-input"
+                />
+                <span className="custom-checkbox"></span>
+              </label>
             </p>
           </div>
           <div className="submenu-item">
             <p className="submenu-link">
               Piscine{" "}
-              <input
-                onClick={() => handleOptionClick("piscine")}
-                type="checkbox"
-                className="checkbox"
-              />
+              <label className="checkbox-wrapper">
+                <input
+                  onClick={() => handleOptionClick("piscine")}
+                  type="checkbox"
+                  className="checkbox-input"
+                />
+                <span className="custom-checkbox"></span>
+              </label>
             </p>
           </div>
           <div className="submenu-item">
             <p className="submenu-link">
               Randonnée{" "}
-              <input
-                onClick={() => handleOptionClick("randonnee")}
-                type="checkbox"
-                className="checkbox"
-              />
+              <label className="checkbox-wrapper">
+                <input
+                  onClick={() => handleOptionClick("randonnee")}
+                  type="checkbox"
+                  className="checkbox-input"
+                />
+                <span className="custom-checkbox"></span>
+              </label>
             </p>
           </div>
           <div className="submenu-item">
             <p className="submenu-link">
               Location de vélo{" "}
-              <input
-                onClick={() => handleOptionClick("location_velo")}
-                type="checkbox"
-                className="checkbox"
-              />
+              <label className="checkbox-wrapper">
+                <input
+                  onClick={() => handleOptionClick("location_velo")}
+                  type="checkbox"
+                  className="checkbox-input"
+                />
+                <span className="custom-checkbox"></span>
+              </label>
             </p>
           </div>
         </div>

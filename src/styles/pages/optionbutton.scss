@@ -117,8 +117,45 @@
   text-align: center;
   cursor: pointer;
   transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
-  .checkbox {
+
+  .checkbox-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  .checkbox-input {
+    display: none;
+  }
+
+  .custom-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    display: inline-block;
     cursor: pointer;
+    position: relative;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+  }
+
+  // Style du background de la coche
+  .checkbox-input:checked + .custom-checkbox {
+    background-color: #4caf50;
+    border-color: #4caf50;
+  }
+
+  // Style de la coche (blanc)
+  .checkbox-input:checked + .custom-checkbox::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: -2px;
+    width: 6px;
+    height: 14px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
   }
 }
 
