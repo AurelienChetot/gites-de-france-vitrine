@@ -143,9 +143,6 @@
 
 .title {
   opacity: 0;
-  transition-duration: 300ms;
-  transition-timing-function: ease-in-out-out;
-  transition-delay: 100ms;
   position: absolute;
   font-family: "Roboto";
   text-align: left;
@@ -460,7 +457,7 @@
 }
 
 .tr-25:hover ~ #card {
-  transition: 125ms ease-in-out;
+  // transition: 125ms ease-in-out;
   transform: rotateX(20deg) rotateY(-10deg) rotateZ(0deg);
 }
 
