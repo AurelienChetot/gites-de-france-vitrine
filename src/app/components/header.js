@@ -9,8 +9,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-import Navbar from "./navbar";
-
 export default function Header() {
   const [gites, setGites] = useState([]);
 
@@ -33,7 +31,6 @@ export default function Header() {
 
   return (
     <header>
-      <Navbar />
       <Slider {...settings}>
         {gites.map((gite) => (
           <div key={gite.id} className="gite-header">
