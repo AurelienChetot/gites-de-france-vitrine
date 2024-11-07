@@ -7,11 +7,24 @@ import Bed from "../../../public/svg/bed.svg";
 import Star from "../../../public/svg/star.svg";
 import Euro from "../../../public/svg/euro.svg";
 
-export default function Section({ gites, selectedRegion }) {
-  const filteredGites =
-    selectedRegion === "Tous"
-      ? gites
-      : gites.filter((gite) => gite.region === selectedRegion);
+export default function Section({ gites, selectedRegion, selectedOptions }) {
+  // Filtrage des gites en fonction de la région et des options sélectionnée (filtre)
+  const filteredGites = gites.filter((gite) => {
+    const matchesRegion =
+      selectedRegion === "Tous" || gite.region === selectedRegion;
+
+    const matchesOptions =
+      (selectedOptions.animaux_acceptes === "oui"
+        ? gite.animaux_acceptes === "oui"
+        : true) &&
+      (selectedOptions.piscine === "oui" ? gite.piscine === "oui" : true) &&
+      (selectedOptions.randonnee === "oui" ? gite.randonnee === "oui" : true) &&
+      (selectedOptions.location_velo === "oui"
+        ? gite.location_velo === "oui"
+        : true);
+
+    return matchesRegion && matchesOptions;
+  });
   return (
     <section className="section-container">
       <p className="text-color">Retrouvez notre sélection :</p>

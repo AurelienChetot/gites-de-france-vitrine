@@ -1,10 +1,19 @@
-export default function OptionButton() {
+"use client";
+
+export default function OptionButton({ setSelectedOptions }) {
+  const handleOptionClick = (option) => {
+    setSelectedOptions((prevOptions) => ({
+      ...prevOptions,
+      //Bascule entre oui et non pour le click
+      [option]: prevOptions[option] === "oui" ? "non" : "oui",
+    }));
+  };
+
   return (
-    /* From Uiverse.io by gharsh11032000 */
     <div className="menu-option">
       <div className="item">
         <a href="#" className="link">
-          <span> Plus de filtre </span>
+          <span>Plus de filtres</span>
           <svg viewBox="0 0 360 360" xmlSpace="preserve">
             <g id="SVGRepo_iconCarrier">
               <path
@@ -15,16 +24,28 @@ export default function OptionButton() {
           </svg>
         </a>
         <div className="submenu">
-          <div className="submenu-item">
+          <div
+            className="submenu-item"
+            onClick={() => handleOptionClick("animaux_acceptes")}
+          >
             <p className="submenu-link">Animaux Acceptés</p>
           </div>
-          <div className="submenu-item">
+          <div
+            className="submenu-item"
+            onClick={() => handleOptionClick("piscine")}
+          >
             <p className="submenu-link">Piscine</p>
           </div>
-          <div className="submenu-item">
-            <p className="submenu-link">Randonée</p>
+          <div
+            className="submenu-item"
+            onClick={() => handleOptionClick("randonnee")}
+          >
+            <p className="submenu-link">Randonnée</p>
           </div>
-          <div className="submenu-item">
+          <div
+            className="submenu-item"
+            onClick={() => handleOptionClick("location_velo")}
+          >
             <p className="submenu-link">Location de vélo</p>
           </div>
         </div>

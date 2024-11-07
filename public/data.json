@@ -8,7 +8,11 @@
     "image": "/images/1.png",
     "price_per_night": 120,
     "capacity": 4,
-    "beds": 2
+    "beds": 2,
+    "animaux_acceptes": "oui",
+    "piscine": "non",
+    "randonnee": "oui",
+    "location_velo": "non"
   },
   {
     "id": 2,
@@ -19,7 +23,11 @@
     "image": "/images/2.png",
     "price_per_night": 200,
     "capacity": 6,
-    "beds": 3
+    "beds": 3,
+    "animaux_acceptes": "non",
+    "piscine": "oui",
+    "randonnee": "non",
+    "location_velo": "oui"
   },
   {
     "id": 3,
@@ -30,7 +38,11 @@
     "image": "/images/3.png",
     "price_per_night": 150,
     "capacity": 5,
-    "beds": 3
+    "beds": 3,
+    "animaux_acceptes": "oui",
+    "piscine": "non",
+    "randonnee": "oui",
+    "location_velo": "oui"
   },
   {
     "id": 4,
@@ -41,7 +53,11 @@
     "image": "/images/4.png",
     "price_per_night": 130,
     "capacity": 4,
-    "beds": 2
+    "beds": 2,
+    "animaux_acceptes": "non",
+    "piscine": "oui",
+    "randonnee": "oui",
+    "location_velo": "non"
   },
   {
     "id": 5,
@@ -52,7 +68,11 @@
     "image": "/images/5.png",
     "price_per_night": 100,
     "capacity": 4,
-    "beds": 2
+    "beds": 2,
+    "animaux_acceptes": "oui",
+    "piscine": "non",
+    "randonnee": "non",
+    "location_velo": "oui"
   },
   {
     "id": 6,
@@ -63,7 +83,11 @@
     "image": "/images/6.png",
     "price_per_night": 110,
     "capacity": 5,
-    "beds": 3
+    "beds": 3,
+    "animaux_acceptes": "non",
+    "piscine": "oui",
+    "randonnee": "oui",
+    "location_velo": "non"
   },
   {
     "id": 7,
@@ -74,7 +98,11 @@
     "image": "/images/7.png",
     "price_per_night": 180,
     "capacity": 6,
-    "beds": 3
+    "beds": 3,
+    "animaux_acceptes": "oui",
+    "piscine": "non",
+    "randonnee": "oui",
+    "location_velo": "oui"
   },
   {
     "id": 8,
@@ -85,7 +113,11 @@
     "image": "/images/8.png",
     "price_per_night": 160,
     "capacity": 5,
-    "beds": 3
+    "beds": 3,
+    "animaux_acceptes": "oui",
+    "piscine": "oui",
+    "randonnee": "non",
+    "location_velo": "non"
   },
   {
     "id": 9,
@@ -96,7 +128,11 @@
     "image": "/images/9.png",
     "price_per_night": 220,
     "capacity": 6,
-    "beds": 3
+    "beds": 3,
+    "animaux_acceptes": "non",
+    "piscine": "oui",
+    "randonnee": "oui",
+    "location_velo": "non"
   },
   {
     "id": 10,
@@ -107,6 +143,10 @@
     "image": "/images/10.png",
     "price_per_night": 140,
     "capacity": 4,
-    "beds": 2
+    "beds": 2,
+    "animaux_acceptes": "oui",
+    "piscine": "non",
+    "randonnee": "oui",
+    "location_velo": "oui"
   }
 ]

@@ -11,6 +11,14 @@ import Loading from "./loading";
 export default function HomeClient({ gites }) {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedRegion, setSelectedRegion] = useState("Tous");
+  const [selectedOptions, setSelectedOptions] = useState({
+    //non par defaut et se change a la selection dans optionbutton.js
+    animaux_acceptes: "non",
+    piscine: "non",
+    randonnee: "non",
+    location_velo: "non",
+  });
+
   const [autoplay, setAutoplay] = useState(false);
 
   useEffect(() => {
@@ -26,8 +34,16 @@ export default function HomeClient({ gites }) {
   return (
     <div>
       <Header gites={gites} autoplay={autoplay} />
-      <Navbar setSelectedRegion={setSelectedRegion} setAutoplay={setAutoplay} />
-      <Section gites={gites} selectedRegion={selectedRegion} />
+      <Navbar
+        setSelectedRegion={setSelectedRegion}
+        setAutoplay={setAutoplay}
+        setSelectedOptions={setSelectedOptions}
+      />
+      <Section
+        gites={gites}
+        selectedRegion={selectedRegion}
+        selectedOptions={selectedOptions}
+      />
       <Footer />
     </div>
   );
