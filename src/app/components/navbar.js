@@ -2,6 +2,8 @@
 
 import { useState, useEffect, useRef } from "react";
 
+import Button from "../components/optionbutton";
+
 export default function Navbar({ setAutoplay, setSelectedRegion }) {
   const [isSticky, setIsSticky] = useState(false);
   const navbarRef = useRef(null);
@@ -51,6 +53,7 @@ export default function Navbar({ setAutoplay, setSelectedRegion }) {
         <li onClick={() => setSelectedRegion("Corse")}>Corse</li>
         <li onClick={() => setSelectedRegion("Grand Est")}>Grand Est</li>
       </ul>
+      <Button />
       <label className="container-navbar">
         <div className="checkbox-text-container">
           <p>Activé Slider :</p>
