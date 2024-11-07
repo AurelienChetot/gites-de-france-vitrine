@@ -107,7 +107,8 @@
 }
 
 .submenu .submenu-link {
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding: 12px 24px;
   font-family: "Roboto";
   font-size: 0.9rem;
@@ -116,6 +117,9 @@
   text-align: center;
   cursor: pointer;
   transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  .checkbox {
+    cursor: pointer;
+  }
 }
 
 .submenu .submenu-item:last-child .submenu-link {

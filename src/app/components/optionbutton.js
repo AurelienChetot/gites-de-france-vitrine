@@ -24,29 +24,45 @@ export default function OptionButton({ setSelectedOptions }) {
           </svg>
         </a>
         <div className="submenu">
-          <div
-            className="submenu-item"
-            onClick={() => handleOptionClick("animaux_acceptes")}
-          >
-            <p className="submenu-link">Animaux Acceptés</p>
+          <div className="submenu-item">
+            <p className="submenu-link">
+              Animaux Acceptés{" "}
+              <input
+                onClick={() => handleOptionClick("animaux_acceptes")}
+                type="checkbox"
+                className="checkbox"
+              />
+            </p>
           </div>
-          <div
-            className="submenu-item"
-            onClick={() => handleOptionClick("piscine")}
-          >
-            <p className="submenu-link">Piscine</p>
+          <div className="submenu-item">
+            <p className="submenu-link">
+              Piscine{" "}
+              <input
+                onClick={() => handleOptionClick("piscine")}
+                type="checkbox"
+                className="checkbox"
+              />
+            </p>
           </div>
-          <div
-            className="submenu-item"
-            onClick={() => handleOptionClick("randonnee")}
-          >
-            <p className="submenu-link">Randonnée</p>
+          <div className="submenu-item">
+            <p className="submenu-link">
+              Randonnée{" "}
+              <input
+                onClick={() => handleOptionClick("randonnee")}
+                type="checkbox"
+                className="checkbox"
+              />
+            </p>
           </div>
-          <div
-            className="submenu-item"
-            onClick={() => handleOptionClick("location_velo")}
-          >
-            <p className="submenu-link">Location de vélo</p>
+          <div className="submenu-item">
+            <p className="submenu-link">
+              Location de vélo{" "}
+              <input
+                onClick={() => handleOptionClick("location_velo")}
+                type="checkbox"
+                className="checkbox"
+              />
+            </p>
           </div>
         </div>
       </div>

@@ -26,7 +26,7 @@
     "beds": 3,
     "animaux_acceptes": "non",
     "piscine": "oui",
-    "randonnee": "non",
+    "randonnee": "oui",
     "location_velo": "oui"
   },
   {
@@ -71,7 +71,7 @@
     "beds": 2,
     "animaux_acceptes": "oui",
     "piscine": "non",
-    "randonnee": "non",
+    "randonnee": "oui",
     "location_velo": "oui"
   },
   {
@@ -116,7 +116,7 @@
     "beds": 3,
     "animaux_acceptes": "oui",
     "piscine": "oui",
-    "randonnee": "non",
+    "randonnee": "oui",
     "location_velo": "non"
   },
   {
