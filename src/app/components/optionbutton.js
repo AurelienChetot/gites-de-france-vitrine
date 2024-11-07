@@ -16,24 +16,16 @@ export default function OptionButton() {
         </a>
         <div className="submenu">
           <div className="submenu-item">
-            <a href="#" className="submenu-link">
-              Animaux Acceptés
-            </a>
+            <p className="submenu-link">Animaux Acceptés</p>
           </div>
           <div className="submenu-item">
-            <a href="#" className="submenu-link">
-              Piscine
-            </a>
+            <p className="submenu-link">Piscine</p>
           </div>
           <div className="submenu-item">
-            <a href="#" className="submenu-link">
-              Randonée
-            </a>
+            <p className="submenu-link">Randonée</p>
           </div>
           <div className="submenu-item">
-            <a href="#" className="submenu-link">
-              Location de vélo
-            </a>
+            <p className="submenu-link">Location de vélo</p>
           </div>
         </div>
       </div>

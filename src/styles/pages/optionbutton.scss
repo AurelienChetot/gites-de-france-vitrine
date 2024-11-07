@@ -48,7 +48,7 @@
 .menu-option .link svg {
   width: 14px;
   height: 14px;
-  fill: #000000;
+  fill: $text-color;
   transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -83,7 +83,7 @@
   transform: translateY(0);
   pointer-events: auto;
   border-top: transparent;
-  background-color: $color-hover;
+  background-color: $white-opac;
 }
 
 .menu-option .item:hover .link {
@@ -109,9 +109,12 @@
 .submenu .submenu-link {
   display: block;
   padding: 12px 24px;
+  font-family: "Roboto";
+  font-size: 0.9rem;
   width: 100%;
   position: relative;
   text-align: center;
+  cursor: pointer;
   transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
