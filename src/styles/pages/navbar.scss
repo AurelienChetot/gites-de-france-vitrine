@@ -27,6 +27,7 @@
       transition: color 0.3s;
       font-family: "Roboto";
       z-index: 1;
+      cursor: pointer;
 
       // Style hover li
       &::after {

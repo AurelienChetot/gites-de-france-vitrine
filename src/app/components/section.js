@@ -7,12 +7,16 @@ import Bed from "../../../public/svg/bed.svg";
 import Star from "../../../public/svg/star.svg";
 import Euro from "../../../public/svg/euro.svg";
 
-export default function Section({ gites }) {
+export default function Section({ gites, selectedRegion }) {
+  const filteredGites =
+    selectedRegion === "Tous"
+      ? gites
+      : gites.filter((gite) => gite.region === selectedRegion);
   return (
     <section className="section-container">
-      <p className="text-color">Retrouvez notre séléction :</p>
+      <p className="text-color">Retrouvez notre sélection :</p>
       <div className="card-container">
-        {gites.map((gite, index) => (
+        {filteredGites.map((gite, index) => (
           <div key={index} className="container noselect">
             <div className="canvas">
               <div className="tracker tr-1"></div>
