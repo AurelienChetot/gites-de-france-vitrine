@@ -1,3 +1,6 @@
+.container-navbar {
+  position: absolute;
+}
 .gite-header {
   position: relative;
   height: 80vh;
@@ -57,6 +60,53 @@
   margin-top: 0.5rem;
 }
 
+// Checkbox
+/* From Uiverse.io by SelfMadeSystem */
+.checkbox-text-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1000;
+  padding: 13px;
+  border-radius: 20px;
+  gap: 15px;
+  background-color: $secondary-background-color;
+
+  p {
+    color: $text-color;
+    font-family: "Roboto";
+  }
+}
+
+.container-navbar {
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.container-navbar input {
+  display: none;
+}
+
+.container-navbar svg {
+  overflow: visible;
+}
+
+.path {
+  fill: none;
+  stroke: white;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;
+  stroke-dasharray: 241 9999999;
+  stroke-dashoffset: 0;
+}
+
+.container-navbar input:checked ~ svg .path {
+  stroke-dasharray: 70.5096664428711 9999999;
+  stroke-dashoffset: -262.2723388671875;
+}
+
 // Media querry < 1250
 @media only screen and (max-width: 1250px) {
 }
@@ -71,5 +121,16 @@
   }
   .gite-header h1 .gites {
     font-size: 2.5rem;
+  }
+  .checkbox-text-container {
+    padding: 13px;
+    border-radius: 20px;
+    top: 10px;
+    right: 10px;
+    left: 0px;
+    bottom: 0px;
+  }
+  .container-navbar {
+    white-space: initial;
   }
 }

@@ -68,49 +68,6 @@
     }
   }
 }
-
-// Checkbox
-/* From Uiverse.io by SelfMadeSystem */
-.checkbox-text-container {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-
-  p {
-    color: $text-color;
-    font-family: "Roboto";
-  }
-}
-
-.container-navbar {
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.container-navbar input {
-  display: none;
-}
-
-.container-navbar svg {
-  overflow: visible;
-}
-
-.path {
-  fill: none;
-  stroke: white;
-  stroke-width: 6;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;
-  stroke-dasharray: 241 9999999;
-  stroke-dashoffset: 0;
-}
-
-.container-navbar input:checked ~ svg .path {
-  stroke-dasharray: 70.5096664428711 9999999;
-  stroke-dashoffset: -262.2723388671875;
-}
-
 // Menu Burger
 
 .hamburger {
@@ -199,12 +156,5 @@
         padding: 10px 30px;
       }
     }
-  }
-  .checkbox-text-container {
-    // flex-direction: column;
-    gap: 15px;
-  }
-  .container-navbar {
-    white-space: initial;
   }
 }
