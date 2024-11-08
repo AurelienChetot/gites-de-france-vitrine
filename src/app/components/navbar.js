@@ -9,6 +9,7 @@ export default function Navbar({
   setSelectedOptions,
 }) {
   const [isSticky, setIsSticky] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const navbarRef = useRef(null);
 
   useEffect(() => {
@@ -41,7 +42,10 @@ export default function Navbar({
 
   return (
     <nav ref={navbarRef} className={`navbar ${isSticky ? "sticky" : ""}`}>
-      <ul>
+      <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>
+        ☰
+      </button>
+      <ul className={`menu ${isOpen ? "open" : ""}`}>
         <li onClick={() => setSelectedRegion("Tous")}>Tous</li>
         <li onClick={() => setSelectedRegion("Provence-Alpes-Côte d'Azur")}>
           Provence

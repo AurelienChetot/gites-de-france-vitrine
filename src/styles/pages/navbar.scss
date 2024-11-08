@@ -10,7 +10,6 @@
   background-color: $secondary-background-color;
   padding: 20px;
   width: 80%;
-
   margin: 0 auto;
   text-align: center;
   border-radius: 15px;
@@ -30,13 +29,20 @@
     border-top-left-radius: 0;
   }
 
-  ul {
+  .menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: $text-color;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .menu {
     list-style: none;
     display: flex;
-    // gap: 5px;
     white-space: nowrap;
-    // a revoir
-    flex-wrap: wrap;
 
     li {
       position: relative;
@@ -50,7 +56,6 @@
       z-index: 1;
       cursor: pointer;
 
-      // Style hover li
       &::after {
         content: "";
         position: absolute;
@@ -114,4 +119,38 @@
 .container-navbar input:checked ~ svg .path {
   stroke-dasharray: 70.5096664428711 9999999;
   stroke-dashoffset: -262.2723388671875;
+}
+
+// Media querry < 1250
+@media only screen and (max-width: 1250px) {
+  .navbar {
+    .menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: $secondary-background-color;
+      flex-direction: column;
+      width: 40%;
+      padding: 10px 0;
+      border-radius: 0 0 15px 15px;
+      transition: max-height 0.3s ease;
+    }
+
+    .menu.open {
+      display: flex;
+      align-items: flex-start;
+      padding-left: 20px;
+      max-height: 300px;
+    }
+
+    .menu-toggle {
+      display: block;
+    }
+  }
+}
+
+// Media querry < 850
+@media only screen and (max-width: 850px) {
 }
