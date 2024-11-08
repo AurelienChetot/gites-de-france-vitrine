@@ -115,16 +115,23 @@
   .navbar {
     flex-direction: row-reverse;
     .menu {
-      display: none;
+      display: flex;
       position: absolute;
-      top: 100%;
+      top: 99%;
       right: 0;
       background-color: $secondary-background-color-navbar;
       flex-direction: column;
       width: 180px;
-      padding: 10px 0;
+      padding: 0;
       border-radius: 0 15px 15px 15px;
-      transition: max-height 0.3s ease;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+
+      &.open {
+        max-height: 600px;
+        padding: 10px 0;
+      }
     }
 
     .menu.open {
