@@ -190,6 +190,7 @@
 // Media querry < 850
 @media only screen and (max-width: 850px) {
   .navbar {
+    padding: 10px;
     width: 100%;
     .menu {
       gap: 10px;
@@ -197,6 +198,10 @@
         padding: 10px 30px;
       }
     }
+  }
+  .checkbox-text-container {
+    // flex-direction: column;
+    gap: 5px;
   }
   .container-navbar {
     white-space: initial;

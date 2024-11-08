@@ -56,3 +56,20 @@
   font-size: 3rem;
   margin-top: 0.5rem;
 }
+
+// Media querry < 1250
+@media only screen and (max-width: 1250px) {
+}
+
+// Media querry < 850
+@media only screen and (max-width: 850px) {
+  .text-container {
+    bottom: 17%;
+  }
+  .gite-header h1 {
+    font-size: 3.5rem;
+  }
+  .gite-header h1 .gites {
+    font-size: 2.5rem;
+  }
+}

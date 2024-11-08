@@ -8,6 +8,7 @@
   list-style: none;
   white-space: nowrap;
   span {
+    font-family: "Roboto";
     color: $text-color;
   }
 }
@@ -80,7 +81,6 @@
 .menu-option .item:hover .submenu {
   opacity: 1;
   visibility: visible;
-
   transform: translateY(0);
   pointer-events: auto;
   border-top: transparent;
@@ -116,7 +116,6 @@
   width: 100%;
   position: relative;
   text-align: center;
-  cursor: pointer;
   transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
 
   .checkbox-wrapper {
@@ -172,7 +171,7 @@
   transform: scaleX(0);
   width: 100%;
   height: 100%;
-  background-color: $secondary-background-color;
+  background-color: $color-hover;
   z-index: -1;
   transform-origin: left;
   transition: transform 0.48s cubic-bezier(0.23, 1, 0.32, 1);
@@ -185,4 +184,15 @@
 
 .submenu .submenu-link:hover {
   color: #ffffff;
+}
+
+// Media querry < 1250
+@media only screen and (max-width: 1250px) {
+}
+
+// Media querry < 850
+@media only screen and (max-width: 850px) {
+  .menu-option .link {
+    padding: 12px 25px;
+  }
 }
