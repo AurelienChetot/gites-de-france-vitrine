@@ -192,6 +192,9 @@
 
 // Media querry < 850
 @media only screen and (max-width: 850px) {
+  .menu-option {
+    margin-left: 15px;
+  }
   .menu-option .link {
     padding: 12px 15px;
   }

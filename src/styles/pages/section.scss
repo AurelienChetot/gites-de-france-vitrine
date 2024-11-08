@@ -188,7 +188,7 @@
 .front-text {
   position: absolute;
   top: -140px;
-  width: 300%;
+  width: 250%;
   text-shadow: 1px 1px rgb(49, 49, 49);
 }
 
@@ -608,5 +608,12 @@
   }
   .card-container {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+// Media querry < 339 for resize cards
+@media only screen and (max-width: 380px) {
+  .container {
+    width: 280px;
   }
 }

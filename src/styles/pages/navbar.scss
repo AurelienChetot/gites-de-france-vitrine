@@ -18,7 +18,7 @@
   &.sticky {
     position: fixed;
     background-color: $secondary-background-color-navbar;
-    top: 0;
+    top: -3px;
     left: 0;
     width: 100%;
     z-index: 1000;
@@ -119,20 +119,17 @@
       position: absolute;
       top: 100%;
       right: 0;
-      right: 0;
       background-color: $secondary-background-color-navbar;
       flex-direction: column;
       width: 180px;
       padding: 10px 0;
-      border-radius: 0 0 15px 15px;
+      border-radius: 0 15px 15px 15px;
       transition: max-height 0.3s ease;
     }
 
     .menu.open {
       display: flex;
       align-items: center;
-      padding-left: 20px;
-      max-height: 800px;
     }
 
     .menu-toggle {
@@ -151,6 +148,7 @@
     padding-right: 10px;
     width: 100%;
     .menu {
+      top: 98%;
       gap: 10px;
       li {
         padding: 10px 30px;
