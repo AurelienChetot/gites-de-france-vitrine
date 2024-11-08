@@ -72,7 +72,6 @@ export default function Navbar({
         <li onClick={() => setSelectedRegion("Corse")}>Corse</li>
         <li onClick={() => setSelectedRegion("Grand Est")}>Grand Est</li>
       </ul>
-      <OptionButton setSelectedOptions={setSelectedOptions} />
       <label className="container-navbar">
         <div className="checkbox-text-container">
           <p>Activé Slider</p>
@@ -86,6 +85,7 @@ export default function Navbar({
           </svg>
         </div>
       </label>
+      <OptionButton setSelectedOptions={setSelectedOptions} />
     </nav>
   );
 }
