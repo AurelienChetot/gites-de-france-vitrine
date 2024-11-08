@@ -6,6 +6,10 @@ import Person from "../../../public/svg/person.svg";
 import Bed from "../../../public/svg/bed.svg";
 import Star from "../../../public/svg/star.svg";
 import Euro from "../../../public/svg/euro.svg";
+import Dog from "../../../public/svg/dog.svg";
+import Swiming from "../../../public/svg/piscine.svg";
+import Rando from "../../../public/svg/rando.svg";
+import Velo from "../../../public/svg/bike.svg";
 
 export default function Section({ gites, selectedRegion, selectedOptions }) {
   // Filtrage des gites en fonction de la région et des options sélectionnée (filtre)
@@ -80,6 +84,27 @@ export default function Section({ gites, selectedRegion, selectedOptions }) {
                     <div className="bed-container">
                       <Image alt={Bed} src={Bed} width={25} height={0} />
                       {gite.beds}
+                    </div>
+                    <div className="animal-container">
+                      <Image alt={Dog} src={Dog} width={25} height={0} />
+                      {gite.animaux_acceptes}
+                    </div>
+                    <div className="swiming-container">
+                      <Image
+                        alt={Swiming}
+                        src={Swiming}
+                        width={30}
+                        height={0}
+                      />
+                      {gite.piscine}
+                    </div>
+                    <div className="rando-container">
+                      <Image alt={Rando} src={Rando} width={25} height={0} />
+                      {gite.randonnee}
+                    </div>
+                    <div className="velo-container">
+                      <Image alt={Velo} src={Velo} width={25} height={0} />
+                      {gite.location_velo}
                     </div>
                   </div>
                   <div className="price-container">

@@ -31,6 +31,8 @@
   }
 }
 
+// container svg
+
 .capacity-bed-container {
   display: flex;
   align-items: flex-end;
@@ -38,12 +40,15 @@
 }
 
 .capacity-container,
-.bed-container {
+.bed-container,
+.animal-container,
+.swiming-container,
+.rando-container,
+.velo-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 1.2rem;
-  margin-left: 20px;
   padding-top: 10px;
 }
 
@@ -77,6 +82,8 @@
   bottom: -80px;
   gap: 3px;
 }
+
+// font and effect
 
 .front-text {
   position: absolute;
@@ -147,8 +154,7 @@
   font-family: "Roboto";
   text-align: left;
   bottom: 100px;
-  padding-left: 20px;
-  padding-right: 50px;
+  padding: 0 10px;
   color: $title-color;
 }
 .title::after {
