@@ -12,7 +12,7 @@ export default function OptionButton({ setSelectedOptions }) {
   return (
     <div className="menu-option">
       <div className="item">
-        <a href="#" className="link">
+        <p className="link">
           <span>Plus de filtres</span>
           <svg viewBox="0 0 360 360" xmlSpace="preserve">
             <g id="SVGRepo_iconCarrier">
@@ -22,7 +22,7 @@ export default function OptionButton({ setSelectedOptions }) {
               />
             </g>
           </svg>
-        </a>
+        </p>
         <div className="submenu">
           <div className="submenu-item">
             <p className="submenu-link">
