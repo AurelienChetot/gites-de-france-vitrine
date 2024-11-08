@@ -36,7 +36,7 @@
 
     li {
       position: relative;
-      padding: 10px 5px;
+      padding: 20px 15px;
       color: $text-color;
       text-decoration: none;
       font-size: 16px;
@@ -173,9 +173,9 @@
 
     .menu.open {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       padding-left: 20px;
-      max-height: 300px;
+      max-height: 800px;
     }
 
     .menu-toggle {
@@ -191,5 +191,14 @@
 @media only screen and (max-width: 850px) {
   .navbar {
     width: 100%;
+    .menu {
+      gap: 10px;
+      li {
+        padding: 10px 30px;
+      }
+    }
+  }
+  .container-navbar {
+    white-space: initial;
   }
 }

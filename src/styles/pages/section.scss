@@ -36,14 +36,14 @@
   // color: $text-color;
   font-family: "Roboto";
   font-size: 1.7rem;
-  padding: 150px;
+  // padding: 150px;
 }
 /* From Uiverse.io by kennyotsu */
 .card-message {
   /* color used to softly clip top and bottom of the .words container */
   // --bg-color: #212121;
   background-color: var(--bg-color);
-  padding: 1rem 2rem;
+  // padding: 1rem 2rem;
   border-radius: 1.25rem;
 }
 .loader-message {
@@ -80,6 +80,7 @@
 
 .word {
   display: block;
+  white-space: nowrap;
   height: 100%;
   padding-left: 6px;
   color: $test-color;
@@ -583,6 +584,18 @@
 
 // Media querry < 1250
 @media only screen and (max-width: 1250px) {
+  .loader-message {
+    flex-direction: column;
+    height: 200px;
+    text-align: center;
+    p {
+      padding-bottom: 20px;
+    }
+  }
+  .word {
+    height: 200%;
+    padding-left: 0;
+  }
   .card-container {
     grid-template-columns: repeat(2, 1fr);
   }

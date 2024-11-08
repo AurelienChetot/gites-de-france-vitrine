@@ -75,7 +75,7 @@ export default function Navbar({
       <OptionButton setSelectedOptions={setSelectedOptions} />
       <label className="container-navbar">
         <div className="checkbox-text-container">
-          <p>Activé Slider :</p>
+          <p>Activé Slider</p>
           <input type="checkbox" onChange={handleCheckboxChange} />
           <svg viewBox="0 0 64 64" height="2em" width="2em">
             <path
