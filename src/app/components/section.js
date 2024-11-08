@@ -38,10 +38,23 @@ export default function Section({ gites, selectedRegion, selectedOptions }) {
 
       {filteredGites.length === 0 ? (
         // Affiche ce message si aucun gîte n'est disponible après filtrage
-        <p className="no-results-message">
-          Pas de gîtes disponibles pour le moment, veuillez modifier les
-          filtres.
-        </p>
+        <div className="no-results-message">
+          <div className="card-message">
+            <div className="loader-message">
+              <p>
+                Pas de gîtes disponibles pour le moment, veuillez modifier les
+                filtres :
+              </p>
+              <div className="words">
+                <span className="word">Animaux Acceptés</span>
+                <span className="word">Piscine</span>
+                <span className="word">Randonnée</span>
+                <span className="word">Location de vélo</span>
+                <span className="word">Animaux Acceptés</span>
+              </div>
+            </div>
+          </div>
+        </div>
       ) : (
         <div className="card-container">
           {filteredGites.map((gite, index) => (
