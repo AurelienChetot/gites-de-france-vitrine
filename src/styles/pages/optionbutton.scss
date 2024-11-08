@@ -6,6 +6,7 @@
   width: fit-content;
   display: flex;
   list-style: none;
+  white-space: nowrap;
   span {
     color: $text-color;
   }

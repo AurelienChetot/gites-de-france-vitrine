@@ -580,3 +580,17 @@
   /* Non-prefixed version, currently
 									supported by Chrome, Edge, Opera and Firefox */
 }
+
+// Media querry < 1250
+@media only screen and (max-width: 1250px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// Media querry < 850
+@media only screen and (max-width: 850px) {
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -10,6 +10,7 @@
   background-color: $secondary-background-color;
   padding: 20px;
   width: 80%;
+
   margin: 0 auto;
   text-align: center;
   border-radius: 15px;
@@ -32,11 +33,14 @@
   ul {
     list-style: none;
     display: flex;
-    gap: 5px;
+    // gap: 5px;
+    white-space: nowrap;
+    // a revoir
+    flex-wrap: wrap;
 
     li {
       position: relative;
-      padding: 20px;
+      padding: 10px 5px;
       color: $text-color;
       text-decoration: none;
       font-size: 16px;
@@ -76,6 +80,7 @@
   display: flex;
   align-items: center;
   gap: 15px;
+
   p {
     color: $text-color;
     font-family: "Roboto";
@@ -84,6 +89,7 @@
 
 .container-navbar {
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .container-navbar input {
