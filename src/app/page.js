@@ -8,8 +8,8 @@ export default async function Home() {
   const gites = await res.json();
 
   return (
-    <div>
+    <main>
       <HomeClient gites={gites} />
-    </div>
+    </main>
   );
 }

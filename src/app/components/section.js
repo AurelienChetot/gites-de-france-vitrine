@@ -32,7 +32,7 @@ export default function Section({ gites, selectedRegion, selectedOptions }) {
   return (
     <section className="section-container">
       <p className="text-color">
-        Retrouvez notre sélection :{" "}
+        Retrouvez notre sélection : <br />
         {selectedRegion !== "Tous" && selectedRegion}
       </p>
 

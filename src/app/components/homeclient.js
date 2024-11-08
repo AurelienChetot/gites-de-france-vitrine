@@ -24,7 +24,7 @@ export default function HomeClient({ gites }) {
   useEffect(() => {
     const loadingDelay = setTimeout(() => {
       setIsLoading(false);
-    }, 4000);
+    }, 2000);
 
     return () => clearTimeout(loadingDelay);
   }, [gites]);
