@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 import Person from "../../../public/svg/person.svg";
 import Bed from "../../../public/svg/bed.svg";
@@ -12,7 +13,6 @@ import Rando from "../../../public/svg/rando.svg";
 import Velo from "../../../public/svg/bike.svg";
 
 export default function Section({ gites, selectedRegion, selectedOptions }) {
-  // Filtrage des gites en fonction de la région et des options sélectionnée (filtre)
   const filteredGites = gites.filter((gite) => {
     const matchesRegion =
       selectedRegion === "Tous" || gite.region === selectedRegion;
@@ -94,9 +94,9 @@ export default function Section({ gites, selectedRegion, selectedOptions }) {
                     <p className="effect">Voir plus</p>
                   </div>
                   <div className="button-container">
-                    <a href="https://google.com" target="/blank">
+                    <Link href={`/gite/${gite.id}`}>
                       <button>Visitez</button>
-                    </a>
+                    </Link>
                   </div>
                   <div className="title">
                     <p>{gite.description}</p>
