@@ -1,11 +1,9 @@
 .navbar {
-  position: absolute;
+  position: sticky;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  bottom: 14%;
-  left: 0;
-  right: 0;
+  top: 0;
   z-index: 1000;
   background-color: $secondary-background-color;
   padding: 20px;
@@ -16,7 +14,7 @@
   height: 100px;
 
   &.sticky {
-    position: fixed;
+    position: sticky;
     background-color: $secondary-background-color-navbar;
     top: -3px;
     left: 0;

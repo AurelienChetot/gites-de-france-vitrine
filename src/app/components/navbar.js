@@ -4,32 +4,21 @@ import { useState, useEffect, useRef } from "react";
 import OptionButton from "../components/optionbutton";
 
 export default function Navbar({ setSelectedRegion, setSelectedOptions }) {
-  const [isSticky, setIsSticky] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
   const navbarRef = useRef(null);
 
+  // Fonction pour gérer le scroll
   useEffect(() => {
     const handleScroll = () => {
       if (navbarRef.current) {
-        const scrollPosition = window.scrollY;
-        const windowHeight = window.innerHeight;
-        const stickyThreshold = 75; // Utilise "vh"
-
-        const thresholdInPixels = (stickyThreshold / 100) * windowHeight;
-
-        if (scrollPosition >= thresholdInPixels) {
-          setIsSticky(true);
-        } else {
-          setIsSticky(false);
-        }
+        const navbarTop = navbarRef.current.getBoundingClientRect().top;
+        setIsSticky(navbarTop <= 0);
       }
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
