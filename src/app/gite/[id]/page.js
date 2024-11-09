@@ -2,6 +2,8 @@
 import { notFound } from "next/navigation"; // Affiche page 404 si gite pas trouvé
 import Image from "next/image";
 
+import Rating from "../../components/rating";
+
 import Person from "../../../../public/svg/person.svg";
 import Bed from "../../../../public/svg/bed.svg";
 import Star from "../../../../public/svg/star.svg";
@@ -101,6 +103,9 @@ export default async function GitePage({ params }) {
             </div>
           </div>
         </div>
+      </div>
+      <div className="notation-gitepage-container">
+        <Rating />
       </div>
     </div>
   );
