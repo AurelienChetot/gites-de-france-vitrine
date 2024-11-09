@@ -25,10 +25,38 @@ export default async function GitePage({ params }) {
         width={1000}
         height={500}
       />
-      <div className="gitepage-text-container">
-        <h1>{gite.title}</h1>
-        <p>{gite.description}</p>
-        <p>Prix par nuit: {gite.price_per_night}€</p>
+      {""}
+      <div className="gitepage-info-container">
+        <div className="card-proprio">
+          <div className="infos">
+            <div className="image"></div>
+            <div className="info">
+              <div>
+                <p className="name">Propriétaire</p>
+                <p className="function">{gite.proprietaire}</p>
+              </div>
+              <div className="stats">
+                <p className="flex flex-col">
+                  Portable :<span className="state-value">{gite.portable}</span>
+                </p>
+                <p className="flex flex-col">
+                  Fixe :<span className="state-value">{gite.fixe}</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <button className="request" type="button">
+            Contactez par mail
+          </button>
+        </div>
+        {""}
+        <div className="gitepage-text-container">
+          <h1>{gite.title}</h1>
+          <p className="gitepage-text">{gite.description_2}</p>
+          <p className="gitepage-text">
+            Prix par nuit: {gite.price_per_night}€
+          </p>
+        </div>
       </div>
     </div>
   );

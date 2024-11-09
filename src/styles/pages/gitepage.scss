@@ -1,26 +1,129 @@
 .gitepage-container {
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
   background-color: $primary-background-color;
   min-height: 100vh;
   .img-gitepage {
-    margin-top: 50px;
-    margin-left: 50px;
     border-radius: 10px;
-    width: 950px;
+    width: 50%;
     height: auto;
   }
 }
 
-.gitepage-text-container {
+.gitepage-info-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  height: 460px;
+  width: 30%;
   h1 {
     color: $text-color;
     font-family: "Roboto";
+    margin-bottom: 10px;
   }
-  p {
+  .gitepage-text {
     color: $text-color;
     font-family: "Roboto";
   }
+}
+
+.gitepage-text-container {
+  border: 1px solid $text-color;
+  border-radius: 1.5em;
+  margin-top: 35px;
+  text-align: center;
+  padding: 20px;
+}
+
+// carte proprietaire
+
+.card-proprio {
+  max-width: 320px;
+  border-radius: 1rem;
+  background-color: $secondary-background-color;
+  padding: 1rem;
+}
+
+.infos {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  grid-gap: 1rem;
+  gap: 1rem;
+}
+
+.image {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 0.5rem;
+  background-color: $color-hover;
+  background: linear-gradient(to bottom right, $color-hover, $test-color);
+}
+
+.info {
+  height: 7rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.name {
+  font-family: "Roboto";
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+}
+
+.function {
+  font-family: "Roboto";
+  font-size: 0.85rem;
+  line-height: 1rem;
+  color: rgba(156, 163, 175, 1);
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Roboto";
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 1);
+  font-size: 0.9rem;
+  line-height: 1rem;
+  color: rgba(0, 0, 0, 1);
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 4px;
+  font-family: "Roboto";
+}
+
+.state-value {
+  font-weight: 700;
+  color: $color-hover;
+}
+
+.request {
+  font-family: "Roboto";
+  margin-top: 1.5rem;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.request:hover {
+  background-color: $color-hover;
+  color: #fff;
 }

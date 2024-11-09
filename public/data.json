@@ -12,7 +12,11 @@
     "animaux_acceptes": "oui",
     "piscine": "non",
     "randonnee": "oui",
-    "location_velo": "non"
+    "location_velo": "non",
+    "proprietaire": "Marie Dupont",
+    "portable": "06-55-44-33-22",
+    "fixe": "04-42-33-22-11",
+    "description_2": "Venez découvrir un coin de paradis provençal, où les animaux sont les bienvenus. Profitez des sentiers de randonnée dans les champs de lavande et les collines environnantes, parfaits pour des moments inoubliables en pleine nature."
   },
   {
     "id": 2,
@@ -27,7 +31,11 @@
     "animaux_acceptes": "non",
     "piscine": "oui",
     "randonnee": "oui",
-    "location_velo": "oui"
+    "location_velo": "oui",
+    "proprietaire": "Jean René",
+    "portable": "06-20-80-70-90",
+    "fixe": "03-32-50-12-80",
+    "description_2": "Retrouvez notre havre de paix, avec un magnifique jardin pour se reposer. Accès à une piscine, des sentiers de randonnée et la possibilité de louer des vélos pour explorer les alentours pittoresques de la Côte d'Azur."
   },
   {
     "id": 3,
@@ -42,7 +50,11 @@
     "animaux_acceptes": "oui",
     "piscine": "non",
     "randonnee": "oui",
-    "location_velo": "oui"
+    "location_velo": "oui",
+    "proprietaire": "Pierre Martin",
+    "portable": "06-45-67-32-89",
+    "fixe": "04-78-12-34-56",
+    "description_2": "Profitez d'un séjour au cœur des Alpes dans ce chalet chaleureux. Les animaux sont les bienvenus, et de nombreux sentiers de randonnée vous attendent. Possibilité de louer des vélos pour explorer les paysages montagneux environnants."
   },
   {
     "id": 4,
@@ -57,7 +69,11 @@
     "animaux_acceptes": "non",
     "piscine": "oui",
     "randonnee": "oui",
-    "location_velo": "non"
+    "location_velo": "non",
+    "proprietaire": "Claire Dubois",
+    "portable": "06-78-55-44-33",
+    "fixe": "04-75-32-21-09",
+    "description_2": "Découvrez ce gîte avec piscine, parfait pour se détendre après une journée de randonnée dans les montagnes du Massif Central. Un cadre naturel et paisible pour se ressourcer."
   },
   {
     "id": 5,
@@ -72,7 +88,11 @@
     "animaux_acceptes": "oui",
     "piscine": "non",
     "randonnee": "oui",
-    "location_velo": "oui"
+    "location_velo": "oui",
+    "proprietaire": "Lucie Lefèvre",
+    "portable": "06-12-34-56-78",
+    "fixe": "02-31-45-78-12",
+    "description_2": "Charmante maison entourée de verdure avec un grand jardin accueillant pour les animaux. De nombreux chemins de randonnée et une location de vélo sont disponibles pour explorer la campagne normande."
   },
   {
     "id": 6,
@@ -87,7 +107,11 @@
     "animaux_acceptes": "non",
     "piscine": "oui",
     "randonnee": "oui",
-    "location_velo": "non"
+    "location_velo": "non",
+    "proprietaire": "Marc Duval",
+    "portable": "06-55-44-33-22",
+    "fixe": "02-30-12-45-67",
+    "description_2": "Un séjour paisible dans un cottage normand avec piscine et accès à de nombreux sentiers pour des randonnées tranquilles au cœur des vergers."
   },
   {
     "id": 7,
@@ -102,7 +126,11 @@
     "animaux_acceptes": "oui",
     "piscine": "non",
     "randonnee": "oui",
-    "location_velo": "oui"
+    "location_velo": "oui",
+    "proprietaire": "Elise Dupuis",
+    "portable": "06-75-32-12-34",
+    "fixe": "05-56-12-34-78",
+    "description_2": "Séjournez au cœur d’un domaine viticole où les animaux sont bienvenus. Randonnées et location de vélos sont disponibles pour découvrir les vignobles environnants."
   },
   {
     "id": 8,
@@ -117,7 +145,11 @@
     "animaux_acceptes": "oui",
     "piscine": "oui",
     "randonnee": "oui",
-    "location_velo": "non"
+    "location_velo": "non",
+    "proprietaire": "Charles Lemoine",
+    "portable": "06-78-45-67-23",
+    "fixe": "05-53-34-56-78",
+    "description_2": "Un séjour élégant en Périgord avec piscine et terrasse spacieuse. Les animaux sont acceptés, et vous pourrez profiter de nombreuses randonnées dans la région."
   },
   {
     "id": 9,
@@ -132,7 +164,11 @@
     "animaux_acceptes": "non",
     "piscine": "oui",
     "randonnee": "oui",
-    "location_velo": "non"
+    "location_velo": "non",
+    "proprietaire": "Sophie Rossi",
+    "portable": "06-23-45-67-89",
+    "fixe": "04-95-67-45-23",
+    "description_2": "Découvrez une villa avec vue imprenable sur la mer et un accès direct à la plage. Profitez de la piscine et des randonnées environnantes pour explorer les paysages corses."
   },
   {
     "id": 10,
@@ -147,6 +183,10 @@
     "animaux_acceptes": "oui",
     "piscine": "non",
     "randonnee": "oui",
-    "location_velo": "oui"
+    "location_velo": "oui",
+    "proprietaire": "Antoine Girard",
+    "portable": "06-89-32-21-09",
+    "fixe": "03-26-78-12-34",
+    "description_2": "Profitez d’un séjour au cœur des vignobles champenois où les animaux sont acceptés. Randonnées et location de vélos sont disponibles pour explorer les alentours."
   }
 ]
