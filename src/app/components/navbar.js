@@ -21,12 +21,22 @@ export default function Navbar({ setSelectedRegion, setSelectedOptions }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleRegionClick = (region) => {
+  // Fonction le clic sur un lien et d'empecher le comportement de l'url #top-section
+  const handleScroll = (event, region) => {
+    // Empeche le comportement du lien "#" dans l'URL
+    event.preventDefault();
+
+    // Met a jour la région choisi
     setSelectedRegion(region);
-    // Scroll automatiquement vers le haut de la section
-    document
-      .getElementById("top-section")
-      .scrollIntoView({ behavior: "smooth" });
+
+    // Recupere l'element ciblé par l'id (top-section)
+    const element = document.getElementById("top-section");
+
+    // Si l'element existe effectue le scroll
+    if (element) {
+      // effet de smooth lors du clique
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -46,25 +56,27 @@ export default function Navbar({ setSelectedRegion, setSelectedOptions }) {
         </svg>
       </label>
       <ul className={`menu ${isOpen ? "open" : ""}`}>
-        <li onClick={() => handleRegionClick("Tous")}>
+        <li onClick={(event) => handleScroll(event, "Tous")}>
           <a href="#top-section">Tous</a>
         </li>
-        <li onClick={() => handleRegionClick("Provence-Alpes-Côte d'Azur")}>
+        <li
+          onClick={(event) => handleScroll(event, "Provence-Alpes-Côte d'Azur")}
+        >
           <a href="#top-section">Provence</a>
         </li>
-        <li onClick={() => handleRegionClick("Auvergne-Rhône-Alpes")}>
+        <li onClick={(event) => handleScroll(event, "Auvergne-Rhône-Alpes")}>
           <a href="#top-section">Auvergne</a>
         </li>
-        <li onClick={() => handleRegionClick("Normandie")}>
+        <li onClick={(event) => handleScroll(event, "Normandie")}>
           <a href="#top-section">Normandie</a>
         </li>
-        <li onClick={() => handleRegionClick("Nouvelle-Aquitaine")}>
+        <li onClick={(event) => handleScroll(event, "Nouvelle-Aquitaine")}>
           <a href="#top-section">Nouvelle-Aquitaine</a>
         </li>
-        <li onClick={() => handleRegionClick("Corse")}>
+        <li onClick={(event) => handleScroll(event, "Corse")}>
           <a href="#top-section">Corse</a>
         </li>
-        <li onClick={() => handleRegionClick("Grand Est")}>
+        <li onClick={(event) => handleScroll(event, "Grand Est")}>
           <a href="#top-section">Grand Est</a>
         </li>
       </ul>
