@@ -30,7 +30,7 @@ export default function Section({ gites, selectedRegion, selectedOptions }) {
     return matchesRegion && matchesOptions;
   });
   return (
-    <section className="section-container">
+    <section className="section-container" id="top-section">
       <p className="text-color">
         Retrouvez notre sélection : <br />
         {selectedRegion !== "Tous" && selectedRegion}

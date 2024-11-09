@@ -32,6 +32,11 @@
     display: flex;
     white-space: nowrap;
 
+    a {
+      text-decoration: none;
+      color: $text-color;
+    }
+
     li {
       position: relative;
       padding: 20px 15px;

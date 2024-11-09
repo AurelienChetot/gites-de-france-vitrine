@@ -21,6 +21,14 @@ export default function Navbar({ setSelectedRegion, setSelectedOptions }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleRegionClick = (region) => {
+    setSelectedRegion(region);
+    // Scroll automatiquement vers le haut de la section
+    document
+      .getElementById("top-section")
+      .scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <nav ref={navbarRef} className={`navbar ${isSticky ? "sticky" : ""}`}>
       <label className="hamburger">
@@ -38,19 +46,27 @@ export default function Navbar({ setSelectedRegion, setSelectedOptions }) {
         </svg>
       </label>
       <ul className={`menu ${isOpen ? "open" : ""}`}>
-        <li onClick={() => setSelectedRegion("Tous")}>Tous</li>
-        <li onClick={() => setSelectedRegion("Provence-Alpes-Côte d'Azur")}>
-          Provence
+        <li onClick={() => handleRegionClick("Tous")}>
+          <a href="#top-section">Tous</a>
         </li>
-        <li onClick={() => setSelectedRegion("Auvergne-Rhône-Alpes")}>
-          Auvergne
+        <li onClick={() => handleRegionClick("Provence-Alpes-Côte d'Azur")}>
+          <a href="#top-section">Provence</a>
         </li>
-        <li onClick={() => setSelectedRegion("Normandie")}>Normandie</li>
-        <li onClick={() => setSelectedRegion("Nouvelle-Aquitaine")}>
-          Nouvelle-Aquitaine
+        <li onClick={() => handleRegionClick("Auvergne-Rhône-Alpes")}>
+          <a href="#top-section">Auvergne</a>
         </li>
-        <li onClick={() => setSelectedRegion("Corse")}>Corse</li>
-        <li onClick={() => setSelectedRegion("Grand Est")}>Grand Est</li>
+        <li onClick={() => handleRegionClick("Normandie")}>
+          <a href="#top-section">Normandie</a>
+        </li>
+        <li onClick={() => handleRegionClick("Nouvelle-Aquitaine")}>
+          <a href="#top-section">Nouvelle-Aquitaine</a>
+        </li>
+        <li onClick={() => handleRegionClick("Corse")}>
+          <a href="#top-section">Corse</a>
+        </li>
+        <li onClick={() => handleRegionClick("Grand Est")}>
+          <a href="#top-section">Grand Est</a>
+        </li>
       </ul>
       <OptionButton setSelectedOptions={setSelectedOptions} />
     </nav>

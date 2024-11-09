@@ -2,11 +2,20 @@
 
 export default function OptionButton({ setSelectedOptions }) {
   const handleOptionClick = (option) => {
-    setSelectedOptions((prevOptions) => ({
-      ...prevOptions,
-      //Bascule entre oui et non pour le click
-      [option]: prevOptions[option] === "oui" ? "non" : "oui",
-    }));
+    setSelectedOptions((prevOptions) => {
+      const updatedOptions = {
+        ...prevOptions,
+        // Bascule entre oui et non pour le click
+        [option]: prevOptions[option] === "oui" ? "non" : "oui",
+      };
+
+      // Fait défiler la page vers la section des gites
+      document
+        .getElementById("top-section")
+        .scrollIntoView({ behavior: "smooth" });
+
+      return updatedOptions;
+    });
   };
 
   return (
