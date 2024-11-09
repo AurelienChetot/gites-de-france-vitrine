@@ -4,6 +4,42 @@
   margin-bottom: 50px;
   font-size: 2rem;
   font-family: "Roboto";
+  span {
+    font-size: 1.4rem;
+    transform: translateX(-50%);
+    color: $test-color;
+    background: linear-gradient(
+      to left,
+      $color-hover 0%,
+      $test-color 10%,
+      $color-hover 20%
+    );
+    background-position: 100% 0;
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 2s linear infinite, colorChange 2s infinite alternate;
+    font-weight: 600;
+    font-family: "Roboto";
+    @keyframes colorChange {
+      0% {
+        color: $text-color;
+      }
+      100% {
+        color: rgb(0, 150, 142);
+      }
+    }
+
+    @keyframes shine {
+      0% {
+        background-position: 200% 0;
+      }
+      100% {
+        background-position: 0 0;
+      }
+    }
+  }
 }
 .section-container {
   padding: 180px 0;
