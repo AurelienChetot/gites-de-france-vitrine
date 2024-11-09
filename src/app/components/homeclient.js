@@ -6,10 +6,9 @@ import Navbar from "./navbar";
 import Section from "./section";
 import Header from "./header";
 import Footer from "./footer";
-import Loading from "./loading";
 
 export default function HomeClient({ gites }) {
-  const [isLoading, setIsLoading] = useState(true);
+  const [autoplay, setAutoplay] = useState(false);
   const [selectedRegion, setSelectedRegion] = useState("Tous");
   const [selectedOptions, setSelectedOptions] = useState({
     //non par defaut et se change a la selection dans optionbutton.js
@@ -18,18 +17,6 @@ export default function HomeClient({ gites }) {
     randonnee: "non",
     location_velo: "non",
   });
-
-  const [autoplay, setAutoplay] = useState(false);
-
-  useEffect(() => {
-    const loadingDelay = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-
-    return () => clearTimeout(loadingDelay);
-  }, [gites]);
-
-  if (isLoading) return <Loading />;
 
   return (
     <div>

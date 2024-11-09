@@ -17,11 +17,19 @@ export default async function GitePage({ params }) {
   }
 
   return (
-    <div>
-      <h1>{gite.title}</h1>
-      <p>{gite.description}</p>
-      <Image src={gite.image} alt={gite.title} width={1000} height={500} />
-      <p>Prix par nuit: {gite.price_per_night}€</p>
+    <div className="gitepage-container">
+      <Image
+        className="img-gitepage"
+        src={gite.image}
+        alt={gite.title}
+        width={1000}
+        height={500}
+      />
+      <div className="gitepage-text-container">
+        <h1>{gite.title}</h1>
+        <p>{gite.description}</p>
+        <p>Prix par nuit: {gite.price_per_night}€</p>
+      </div>
     </div>
   );
 }
