@@ -66,13 +66,20 @@ export default function Header({ autoplay, setAutoplay }) {
       <Slider ref={sliderRef} {...settings}>
         {gites.map((gite) => (
           <div key={gite.id} className="gite-header">
-            <Image
-              className="img-header"
-              src={gite.image}
-              alt={gite.title}
-              width={1920}
-              height={1080}
-            />
+            <motion.div
+              className="gite-header"
+              initial={{ scale: 1.1, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+            >
+              <Image
+                className="img-header"
+                src={gite.image}
+                alt={gite.title}
+                width={1920}
+                height={1080}
+              />
+            </motion.div>
             <div className="text-container">
               <motion.h1
                 initial={{ opacity: 0, y: 50 }}
