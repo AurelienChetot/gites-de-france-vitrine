@@ -66,6 +66,10 @@
   bottom: 10px;
 }
 
+.text-color-gitepage {
+  color: $test-color;
+}
+
 // carte proprietaire
 
 .card-proprio {
@@ -161,6 +165,9 @@
 
 // Media querry < 1360
 @media only screen and (max-width: 1360px) {
+  .region-gitepage {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  }
   .gitepage-container {
     flex-direction: column;
     justify-content: flex-start;
@@ -186,7 +193,7 @@
 // Media querry < 680
 @media only screen and (max-width: 680px) {
   .region-gitepage {
-    top: 1px;
+    top: 2px;
     padding: 0 20px;
   }
   .card-proprio {

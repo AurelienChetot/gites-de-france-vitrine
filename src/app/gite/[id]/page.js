@@ -35,7 +35,9 @@ export default async function GitePage({ params }) {
         width={1000}
         height={500}
       />
-      <p className="region-gitepage">Région : {gite.region}</p>
+      <p className="region-gitepage">
+        Région : <span className="text-color-gitepage">{gite.region}</span>
+      </p>
       {""}
       <div className="gitepage-info-container">
         <div className="card-proprio">
@@ -62,10 +64,14 @@ export default async function GitePage({ params }) {
         </div>
         {""}
         <div className="gitepage-text-container">
-          <h1>{gite.title}</h1>
+          <h1>
+            <span className="text-color-gitepage">{gite.title}</span>
+          </h1>
           <p className="gitepage-text">{gite.description_2}</p>
           <div className="gitepage-text-icon-container">
-            <p className="gitepage-text">Plus de détails :</p>
+            <p className="gitepage-text">
+              <span className="text-color-gitepage">Plus de détails :</span>
+            </p>
             <div className="capacity-bed-container">
               <div className="capacity-container">
                 <Image alt={Person} src={Person} width={30} height={0} />
