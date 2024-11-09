@@ -16,7 +16,7 @@ export default async function GitePage({ params }) {
   // stock id gite dans params
   const { id } = await params;
 
-  const res = await fetch("http://localhost:3000/data.json");
+  const res = await fetch(process.env.NEXT_PUBLIC_API_URL);
   const gites = await res.json();
 
   // Filtrer les données pour l'id du gite

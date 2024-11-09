@@ -4,7 +4,7 @@ import HomeClient from "./components/homeclient";
 
 export default async function Home() {
   // Récupere le fetch coté serveur (non client)
-  const res = await fetch("http://localhost:3000/data.json");
+  const res = await fetch(process.env.NEXT_PUBLIC_API_URL);
   const gites = await res.json();
 
   return (
