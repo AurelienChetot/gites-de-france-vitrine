@@ -2,6 +2,14 @@
 import { notFound } from "next/navigation"; // Affiche page 404 si gite pas trouvé
 import Image from "next/image";
 
+import Person from "../../../../public/svg/person.svg";
+import Bed from "../../../../public/svg/bed.svg";
+import Star from "../../../../public/svg/star.svg";
+import Dog from "../../../../public/svg/dog.svg";
+import Swiming from "../../../../public/svg/piscine.svg";
+import Rando from "../../../../public/svg/rando.svg";
+import Velo from "../../../../public/svg/bike.svg";
+
 export default async function GitePage({ params }) {
   // stock id gite dans params
   const { id } = await params;
@@ -25,6 +33,7 @@ export default async function GitePage({ params }) {
         width={1000}
         height={500}
       />
+      <p className="region-gitepage">Région : {gite.region}</p>
       {""}
       <div className="gitepage-info-container">
         <div className="card-proprio">
@@ -53,9 +62,44 @@ export default async function GitePage({ params }) {
         <div className="gitepage-text-container">
           <h1>{gite.title}</h1>
           <p className="gitepage-text">{gite.description_2}</p>
-          <p className="gitepage-text">
-            Prix par nuit: {gite.price_per_night}€
-          </p>
+          <div className="gitepage-text-icon-container">
+            <p className="gitepage-text">Plus de détails :</p>
+            <div className="capacity-bed-container">
+              <div className="capacity-container">
+                <Image alt={Person} src={Person} width={30} height={0} />
+                <p className="gitepage-text">{gite.capacity}</p>
+              </div>
+              <div className="bed-container">
+                <Image alt={Bed} src={Bed} width={25} height={0} />
+                <p className="gitepage-text">{gite.beds}</p>
+              </div>
+              <div className="animal-container">
+                <Image alt={Dog} src={Dog} width={25} height={0} />
+                <p className="gitepage-text">{gite.animaux_acceptes}</p>
+              </div>
+              <div className="swiming-container">
+                <Image alt={Swiming} src={Swiming} width={30} height={0} />
+                <p className="gitepage-text">{gite.piscine}</p>
+              </div>
+              <div className="rando-container">
+                <Image alt={Rando} src={Rando} width={25} height={0} />
+                <p className="gitepage-text">{gite.randonnee}</p>
+              </div>
+              <div className="velo-container">
+                <Image alt={Velo} src={Velo} width={25} height={0} />
+                <p className="gitepage-text">{gite.location_velo}</p>
+              </div>
+            </div>
+            <div className="price-rating-container">
+              <div className="price-gitepage-container">
+                <p>{gite.price_per_night}€ Par nuit</p>
+              </div>
+              <div className="rating-gitepage-container">
+                <Image alt={Star} src={Star} width={25} height={0} />
+                {gite.rating}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
