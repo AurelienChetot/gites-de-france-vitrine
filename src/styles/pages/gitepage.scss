@@ -12,6 +12,7 @@
   justify-content: space-evenly;
   height: 100vh;
   background-color: $primary-background-color;
+  position: relative;
 
   .img-gitepage {
     border-radius: 10px;
@@ -68,7 +69,7 @@
 // carte proprietaire
 
 .card-proprio {
-  width: 350px;
+  min-width: 300px;
   border-radius: 1rem;
   background-color: $secondary-background-color;
   padding: 1rem;
@@ -142,6 +143,7 @@
 
 .request {
   font-family: "Roboto";
+  cursor: pointer;
   margin-top: 1.5rem;
   width: 100%;
   border: 1px solid transparent;
@@ -155,4 +157,53 @@
 .request:hover {
   background-color: $color-hover;
   color: #fff;
+}
+
+// Media querry < 1360
+@media only screen and (max-width: 1360px) {
+  .gitepage-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    // height: auto;
+    .img-gitepage {
+      border-radius: 0;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .gitepage-info-container {
+    flex-direction: row;
+    margin: 60px;
+    gap: 50px;
+    width: 100%;
+    padding: 0px 15px;
+  }
+  .notation-gitepage-container {
+    position: initial;
+  }
+}
+
+// Media querry < 680
+@media only screen and (max-width: 680px) {
+  .region-gitepage {
+    top: 1px;
+    padding: 0 20px;
+  }
+  .card-proprio {
+    min-width: 250px;
+  }
+  .gitepage-container {
+    justify-content: initial;
+    height: auto;
+    overflow-x: hidden;
+    .img-gitepage {
+      width: 150%;
+      height: auto;
+    }
+  }
+  .gitepage-info-container {
+    flex-direction: column;
+    margin: 30px;
+    gap: 0;
+  }
 }
